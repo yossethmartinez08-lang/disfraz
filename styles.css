@@ -1,0 +1,78 @@
+/* Archivo: styles.css - CSS básico para presentación */
+:root{
+  --bg:#f7f7f8;
+  --card:#ffffff;
+  --accent:#c41f1f; /* rojo capa */
+  --text:#222;
+  --muted:#555;
+  --radius:10px;
+  --maxw:840px;
+  --pad:18px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background: linear-gradient(180deg, var(--bg), #eef0f2);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  padding:28px 16px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+
+.site-header{
+  text-align:center;
+  margin-bottom:18px;
+}
+
+.site-header h1{
+  font-size:2.2rem;
+  color:var(--accent);
+  letter-spacing:0.6px;
+  margin-bottom:6px;
+}
+
+.author{color:var(--muted); font-size:0.95rem}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:var(--pad);
+  box-shadow: 0 6px 18px rgba(25,28,30,0.06);
+  margin-bottom:14px;
+}
+
+.card h2{
+  margin-bottom:8px;
+  font-size:1.05rem;
+  color:#111;
+}
+
+.card p, .card li{
+  color:var(--muted);
+  font-size:0.98rem;
+}
+
+.card ul{margin-left:18px; margin-top:8px}
+.card ol{margin-left:18px; margin-top:8px}
+
+.footer-card{
+  text-align:center;
+  font-size:0.95rem;
+  background:linear-gradient(180deg,#fbf8f8,#fafafa);
+}
+
+@media (max-width:520px){
+  :root{--pad:14px}
+  .site-header h1{font-size:1.6rem}
+}
